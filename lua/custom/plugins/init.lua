@@ -14,4 +14,14 @@ return {
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
+
+	-- File viewer in VS code style
+	{
+		'nvim-tree/nvim-tree.lua',
+		version = "*",
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+		config = function()
+			require("nvim-tree").setup {}
+		end,
+	},
 }
