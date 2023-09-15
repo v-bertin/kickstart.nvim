@@ -5,4 +5,13 @@
 return {
 	-- vim plugin for bitbak'ing Yocto recipes
 	{ 'kergoth/vim-bitbake' },
+
+	-- Markdown preview
+	{
+		'iamcco/markdown-preview.nvim',
+		ft = "markdown",
+		config = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
 }
