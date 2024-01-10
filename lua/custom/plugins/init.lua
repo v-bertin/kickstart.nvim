@@ -49,5 +49,14 @@ return {
 				end,
 			})
 		end
-	}
+	},
+
+	-- Project wide search and replace
+	{
+		"nvim-pack/nvim-spectre",
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+			'nvim-tree/nvim-web-devicons',
+		},
+	},
 }
