@@ -59,4 +59,22 @@ return {
 			'nvim-tree/nvim-web-devicons',
 		},
 	},
+
+	-- Monochrom Colorscheme used by the ThePrimeagen
+	-- {
+	-- 	'kdheepak/monochrome.nvim',
+	-- 	priority = 500,
+	-- 	config = function()
+	-- 		vim.cmd.colorscheme("monochrome")
+	-- 	end
+	-- },
+
+	-- Gruvbox Colorscheme
+	{
+		'morhetz/gruvbox',
+		priority = 500,
+		config = function()
+			vim.cmd.colorscheme("gruvbox")
+		end
+	},
 }
