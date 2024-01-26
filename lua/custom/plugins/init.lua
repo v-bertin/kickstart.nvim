@@ -77,4 +77,13 @@ return {
 			vim.cmd.colorscheme("gruvbox")
 		end
 	},
+
+	-- Save with sudo rights
+	{
+		'lambdalisue/suda.vim',
+		config = function()
+			vim.g["suda#prompt"] = string.format("[sudo] Mot de passe de %s: ", vim.env.USERNAME)
+			vim.g["suda#nopass"] = 0
+		end
+	},
 }
