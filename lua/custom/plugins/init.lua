@@ -16,14 +16,14 @@ return {
 	},
 
 	-- File viewer in VS code style
-	{
-		'nvim-tree/nvim-tree.lua',
-		version = "*",
-		dependencies = { 'nvim-tree/nvim-web-devicons' },
-		config = function()
-			require("nvim-tree").setup {}
-		end,
-	},
+	-- {
+	-- 	'nvim-tree/nvim-tree.lua',
+	-- 	version = "*",
+	-- 	dependencies = { 'nvim-tree/nvim-web-devicons' },
+	-- 	config = function()
+	-- 		require("nvim-tree").setup {}
+	-- 	end,
+	-- },
 
 	-- Flutter support in neovim
 	{
@@ -84,6 +84,19 @@ return {
 		config = function()
 			vim.g["suda#prompt"] = string.format("[sudo] Mot de passe de %s: ", vim.env.USERNAME)
 			vim.g["suda#nopass"] = 0
+		end
+	},
+
+	-- Ranger integration
+	{
+		'kevinhwang91/rnvimr',
+		config = function ()
+			vim.g["rnvimr_enable_ex"] = 1
+			vim.g["rnvimr_enable_picker"] = 1
+			vim.g["rnvimr_draw_border"] = 1
+			vim.keymap.set("n","<leader>f", function ()
+				vim.cmd.RnvimrToggle()
+			end)
 		end
 	},
 }
