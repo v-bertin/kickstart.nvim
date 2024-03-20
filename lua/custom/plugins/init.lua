@@ -99,4 +99,7 @@ return {
 			end)
 		end
 	},
+
+	-- Emacs-like multiline cursors
+	{ 'mg979/vim-visual-multi' },
 }
