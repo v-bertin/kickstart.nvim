@@ -102,4 +102,28 @@ return {
 
 	-- Emacs-like multiline cursors
 	{ 'mg979/vim-visual-multi' },
+
+	-- Common-Lisp Development Environment
+	{
+		'vlime/vlime',
+		config = function ()
+			vim.opt.rtp:append(vim.fn.stdpath("data") .. "/lazy/vlime/vim")
+			vim.g["vlime_enable_autodoc"] = true
+			-- vim.g["vlime_window_settings"] = {
+			-- 	'sldb': {
+			-- 		'pos': 'belowright',
+			-- 		'vertical': true
+			-- 	},
+			-- 	'inspector': {
+			-- 		'pos': 'belowright',
+			-- 		'vertical': true
+			-- 	},
+			-- 	'preview': {
+			-- 		'pos': 'belowright',
+			-- 		'size': nil,
+			-- 		'vertical': true
+			-- 	}
+			-- }
+		end
+	},
 }
